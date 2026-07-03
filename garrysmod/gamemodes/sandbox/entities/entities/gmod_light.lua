@@ -58,6 +58,7 @@ function ENT:Think()
 
 	if ( CLIENT ) then
 
+		if ( self:IsDormant() ) then return end
 		if ( !self:GetOn() ) then return end
 
 		local noworld = self:GetLightWorld()
