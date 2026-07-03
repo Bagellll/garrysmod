@@ -29,6 +29,7 @@
 /garrysmod/cfg/*
 garrysmod/settings/addonpresets.txt
 garrysmod/settings/permissions.bin
+garrysmod/settings/mapkeys.res
 
 # Don't add spawnlists
 /garrysmod/settings/spawnlist/*
