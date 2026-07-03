@@ -40,6 +40,7 @@ end
 
 function PLAYER:Loadout()
 
+	self.Player:StripWeapons()
 	self.Player:RemoveAllAmmo()
 
 	if ( cvars.Bool( "sbox_weapons", true ) ) then
