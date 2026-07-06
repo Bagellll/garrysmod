@@ -438,7 +438,6 @@ if SERVER then
 
       -- random selection process, lot like traitor selection
       local safe_count = self.SafeWiresForTime(time)
-      local safes = {}
       local picked = 0
       while picked < safe_count do
          local pick = math.random(1, #choices)

@@ -232,9 +232,9 @@ function SWEP:RemoveItemSample(idx)
       end
 
       table.remove(self.ItemSamples, idx)
-      
+
       self:SendPrints(false)
-   end   
+   end
 end
 
 function SWEP:SecondaryAttack()
@@ -316,7 +316,7 @@ if SERVER then
       local pos = target:LocalToWorld(target:OBBCenter())
 
       self:SendScan(pos)
-      
+
       self:SetLastScanned(idx)
       self.NowRepeating = self:GetRepeating()
 
@@ -334,7 +334,7 @@ if SERVER then
          end
       elseif self.NowRepeating and IsValid(self:GetOwner()) then
          -- owner changed his mind since running last scan?
-         if self:GetRepeating() then 
+         if self:GetRepeating() then
             self:PerformScan(self:GetLastScanned(), true)
          else
             self.NowRepeating = self:GetRepeating()
@@ -362,7 +362,7 @@ if CLIENT then
    local T = LANG.GetTranslation
    local PT = LANG.GetParamTranslation
    local TT = LANG.TryTranslation
-   
+
    function SWEP:DrawHUD()
       self:DrawHelp()
 
@@ -474,7 +474,7 @@ if CLIENT then
                         scanned_pnl:SetIconColor(COLOR_WHITE)
                      end
 
-      if ilist.VBar then 
+      if ilist.VBar then
          ilist.VBar:Remove()
          ilist.VBar = nil
       end
@@ -576,7 +576,7 @@ if CLIENT then
       mwrap:SetPos(m,100)
       mwrap:SetSize(370, 90)
 
-      
+
       local bar = vgui.Create("TTTProgressBar", mwrap)
       bar:SetSize(370, 35)
       bar:SetPos(0, 0)
