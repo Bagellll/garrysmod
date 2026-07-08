@@ -792,10 +792,7 @@ end
 
 function table.Swap( tab, key1, key2 )
 
-	local tmp = tab[ key1 ]
-
-	tab[ key1 ] = tab[ key2 ]
-	tab[ key2 ] = tmp
+	tab[ key1 ], tab[ key2 ] = tab[ key2 ], tab[ key1 ]
 
 end
 
