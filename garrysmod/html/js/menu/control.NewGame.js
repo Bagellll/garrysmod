@@ -172,17 +172,17 @@ function ControllerNewGame( $scope, $element, $rootScope, $location, $filter )
 
 		setTimeout( function()
 		{
-			for ( k in $scope.ServerSettingsSaved.Numeric )
+			for ( var k in $scope.ServerSettingsSaved.Numeric )
 			{
 				lua.Run( 'RunConsoleCommand( %s, %s )', $scope.ServerSettingsSaved.Numeric[ k ].name, String( $scope.ServerSettingsSaved.Numeric[ k ].Value ) );
 			}
 
-			for ( k in $scope.ServerSettingsSaved.Text )
+			for ( var k in $scope.ServerSettingsSaved.Text )
 			{
 				lua.Run( 'RunConsoleCommand( %s, %s )', $scope.ServerSettingsSaved.Text[ k ].name, $scope.ServerSettingsSaved.Text[ k ].Value );
 			}
 
-			for ( k in $scope.ServerSettingsSaved.CheckBox )
+			for ( var k in $scope.ServerSettingsSaved.CheckBox )
 			{
 				lua.Run( 'RunConsoleCommand( %s, %s )', $scope.ServerSettingsSaved.CheckBox[ k ].name, $scope.ServerSettingsSaved.CheckBox[ k ].Value ? "1" : "0" );
 			}
@@ -258,7 +258,7 @@ function UpdateServerSettings( sttngs )
 
 	if ( sttngs.settings )
 	{
-		for ( k in sttngs.settings )
+		for ( var k in sttngs.settings )
 		{
 			var s = sttngs.settings[k];
 			if ( !s.text ) s.text = s.name;

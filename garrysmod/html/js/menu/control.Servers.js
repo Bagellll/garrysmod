@@ -613,7 +613,7 @@ function GetHighestKey( obj )
 	var h = 0;
 	var v = "";
 
-	for ( k in obj )
+	for ( var k in obj )
 	{
 		if ( h == 0 || obj[k] > h )
 		{
