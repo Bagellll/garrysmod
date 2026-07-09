@@ -2420,6 +2420,7 @@
 
 	// Inputs
 	input SetAmmoModifier(float): "Adjust the ammo modifier."
+	input SetMaxPieces(integer): "Adjust the maximum amount of the specified weapon type allowed in the world."
 ]
 
 @PointClass base(Targetname) iconsprite("editor/game_end.vmt") = game_end :
