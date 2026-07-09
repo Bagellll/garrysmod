@@ -212,6 +212,12 @@ local function UpdateMaps()
 
 	MapNames[ "ff_" ] = "Fortress Forever"
 	MapNames[ "mcv_" ] = "Military Conflict: Vietnam"
+
+	local BlackMesaDMMaps = {
+		"dm_boom", "dm_bounce", "dm_chopper", "dm_crossfire", "dm_gasworks", "dm_lambdabunker", "dm_power", "dm_rail", "dm_stack",
+		"dm_stalkyard", "dm_subtransit", "dm_undertow"
+	}
+	for _, map in ipairs( BlackMesaDMMaps ) do MapNames[ map ] = "Black Mesa" end
 	MapNames[ "bm_" ] = "Black Mesa"
 
 	MapNames[ "bhop_" ] = "Bunny Hop"
