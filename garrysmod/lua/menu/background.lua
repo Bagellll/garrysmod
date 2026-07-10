@@ -5,14 +5,14 @@ local FreeMaterial = nil
 
 local function CreateBackgroundMaterial( path )
 	if ( FreeMaterial ) then
-		FreeMaterial:SetDynamicImage( "../" .. path )
+		FreeMaterial:SetDynamicImage( path )
 
 		local ret = FreeMaterial
 		FreeMaterial = nil
 		return ret
 	end
 
-	return DynamicMaterial(  "../" .. path, "0100010" ) -- nocull smooth
+	return DynamicMaterial( path, "0100010" ) -- nocull smooth
 end
 
 local function FreeBackgroundMaterial( mat )

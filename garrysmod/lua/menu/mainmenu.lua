@@ -68,6 +68,11 @@ function PANEL:ScreenshotScan( folder )
 	local bReturn = false
 	local Screenshots = file.Find( folder .. "*.*", "GAME" )
 
+	-- The system will always check materials/ folder first, and the default backgrounds are one folder up
+	-- So optimize the lookup by having it check the correct folder to begin with
+	-- Doesn't work well for workshop mounted gamemode content, so we only do it for base game backgrounds
+	if ( folder == "backgrounds/" ) then folder = "../" .. folder end
+
 	for _, v in ipairs( Screenshots ) do
 		AddBackgroundImage( folder .. v )
 		bReturn = true
